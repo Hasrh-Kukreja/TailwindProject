@@ -21,6 +21,8 @@
     "jsx": "react-jsx"
   },
   "include": [
-    "src"
+    "src",
+    "**/*.mp4",   // Include .mp4 files
+    "**/*.webm"   // Include .webm files
   ]
 }

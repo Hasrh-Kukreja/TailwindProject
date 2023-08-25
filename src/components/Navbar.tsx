@@ -1,22 +1,25 @@
 import React from 'react';
-import logo from "../assests/Images/tesla.png";
+import logo from "../assests/Images/teslalogo.jpg";
 import { AiFillQuestionCircle } from 'react-icons/ai'; 
 import { SiGoogleearth } from 'react-icons/si'; 
 import { CgProfile } from 'react-icons/cg'; 
-import tesla from "../assests/Images/tesla_model_x.jpg";
-import tesla2 from "../assests/Images/tesla2.webp"
-import tesla3 from "../assests/Images/tesla3.jpg"
-import tesla4 from "../assests/Images/tesla4.jpg"
-import tesla5 from "../assests/Images/tesla5.jpg"
+const teslavideos = require("../assests/video/tesla2.mp4");
+const teslavideos1 = require("../assests/video/tesla.mp4");
+const teslavideos2 = require("../assests/video/tesla1.mp4");
+
 function Navbar() {
   return (
     <>
-    <div className='min-h-screen bg-cover bg-center' style={{ backgroundImage: `url(${tesla3})` }}>
-      <div className='flex justify-between items-center py-2 text-white text-xl'>
-        <div>
-          <img src={logo} alt="Tesla Logo" className="w-24 h-18 ml-10" />
+    <div className='min-h-screen relative'>
+      <video className='absolute top-0 left-0 w-full h-full object-cover' autoPlay loop muted>
+        <source src={teslavideos2} type='video/mp4' />
+        Your browser does not support the video tag.
+      </video>
+      <div className='flex justify-between items-center py-2 text-white text-xl relative z-10 h-full'>
+        <div className='flex items-center ml-10'>
+          <img src={logo} alt="Tesla Logo" className="w-24 h-18" />
         </div>
-        <ul className="flex space-x-6">
+        <ul className="flex justify-center items-center space-x-6">
           <li>Vehicles</li>
           <li>Energy</li>
           <li>Charging</li>
@@ -30,26 +33,17 @@ function Navbar() {
         </div>
       </div>
     </div>
-    <div
-    className='min-h-screen bg-cover bg-center' style={{ backgroundImage: `url(${tesla2})` }}>
+    <div className='min-h-screen relative'>
+    <video className='absolute top-0 left-0 w-full h-full object-cover' autoPlay loop muted>
+        <source src={teslavideos1} type='video/mp4' />
+        Your browser does not support the video tag.
+      </video>
     </div>
-    <div
-    className='min-h-screen bg-cover bg-center' style={{ backgroundImage: `url(${tesla})` }}>
-    </div>
-    <div
-    className='min-h-screen bg-cover bg-center' style={{ backgroundImage: `url(${tesla4})` }}>
-    </div>
-    <div
-    className='min-h-screen bg-cover bg-center' style={{ backgroundImage: `url(${tesla5})` }}>
-    </div>
-    <div
-    className='min-h-screen bg-cover bg-center' style={{ backgroundImage: `url(${tesla3})` }}>
-    </div>
-    <div
-    className='min-h-screen bg-cover bg-center' style={{ backgroundImage: `url(${tesla5})` }}>
-    </div>
-    <div
-    className='min-h-screen bg-cover bg-center' style={{ backgroundImage: `url(${tesla2})` }}>
+    <div className='min-h-screen relative'>
+    <video className='absolute top-0 left-0 w-full h-full object-cover' autoPlay loop muted>
+        <source src={teslavideos} type='video/mp4' />
+        Your browser does not support the video tag.
+      </video>
     </div>
     </>
   );
